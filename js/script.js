@@ -1,11 +1,11 @@
 function alertFunction() {
-    alert("THIS IS AN ALERT WEE WOO WEE WOO !!!!!!!")
+    alert("THIS IS AN ALERT WEE WOO WEE WOO !!!!!!!");
 }
 function confirmFunction() {
-    confirm("yes or no")
+    confirm("yes or no");
 }
 function outputFunction() {
-    alert(document.getElementById('textInput').value)
+    alert(document.getElementById('textInput').value);
 }
 
 function newRow() {
@@ -25,13 +25,19 @@ function newRow() {
     }
 }
 
-const paragraph = document.getElementsByTagName("p")
-const numberOfPara = paragraph.length
+const paragraph = document.getElementsByTagName("p");
+const numberOfPara = paragraph.length;
 for (let i = 0; i < numberOfPara; i++) {
-    const input = document.createElement("input")
-    input.type = "color", input.value = "#D3D3D3", input.autocomplete = "off", input.class = "center", input.id = "colorPicker" + i.toString()
+
+    const input = document.createElement("input");
+    input.type = "color";
+    input.value = "#D3D3D3";
+    input.autocomplete = "off";
+    input.class = "center";
+    input.id = "colorPicker" + i.toString();
+
     paragraph[i].insertAdjacentElement("afterend", input);
-    const text = document.getElementById("text" + i.toString())
+    const text = document.getElementById("text" + i.toString());
     input.addEventListener("input", function () {
         text.style.color = this.value;
     })
