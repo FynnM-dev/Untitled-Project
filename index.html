@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="center">
+<html>
 
 <head>
 	<title>Main Page</title>
@@ -7,55 +7,57 @@
 </head>
 
 <body>
-	<div class="mainColumn center" id="mainColumn">
-		<h1>
-			<u>Welcome to the homepage!</u>
-		</h1>
+	<nav>
+		<ul>
+			<li><a href="index.html">Main</a></li>
+			<li><a href="table.html">Table</a></li>
 
-		<img class="center" alt="dog" src="images/dog1.jpeg">
+		</ul>
+	</nav>
 
-		<p class="center margin" id="text0">
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem deserunt minus eum, quis quae delectus nam
-			accusantium dolorem dicta, nemo minima libero ipsa tempore alias. Possimus voluptas sequi vitae id!
-		</p>
+	<main>
+		<h1>Main Page</h1>
+		<hr>
 
-		<img class="center" alt="dog2" src="images/dog2.jpeg">
-
-		<p class="center margin" id="text1" vaule="#f0ffff">
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aliquam dolore, maiores accusantium
-			dicta aliquid dignissimos, magnam impedit culpa laborum corrupti aut molestias obcaecati fugiat,
-			reprehenderit at optio minus vitae.
-		</p>
-
-		<img class="center" alt="dog3" src="images/dog3.jpeg">
-
-		<p class="center margin" id="text2">
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut at, saepe, natus ea, molestias sunt dolores
-			repellendus libero explicabo quasi magni minima harum quibusdam consectetur necessitatibus accusantium omnis
-			iusto exercitationem.
-		</p>
-
-		<div class="center margin" style="width: 500px">
-			<button class="center" onclick="alertFunction()">Pop up dialogue</button>
-			<button class="center" onclick="confirmFunction()">Confirmation button</button>
-			<button class="center" onclick="outputFunction()">Output the text input</button>
-			<button class="center" onclick="newRow()">Add a new row to the table</button>
-			<input autocomplete="off" placeholder="Input text... " type="text" id="textInput" class="center">
+		<div class="main-content">
+			<img src="images/dog.jpg" alt="Dog" title="Dog">
+			<p id="text0">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem deserunt minus eum, quis quae delectus
+				nam
+				accusantium dolorem dicta, nemo minima libero ipsa tempore alias. Possimus voluptas sequi vitae id!
+			</p>
 		</div>
 
-		<table id="table" class="center">
-			<thead>
-				<th><textarea placeholder="Table header" class="tableInput" maxlength="20" autocomplete="off"></textarea> </th>
-				<th><textarea placeholder="Table header" class="tableInput" maxlength="20" autocomplete="off"></textarea> </th>
-			</thead>
-			<tbody>
-				<td><textarea placeholder="Table data" class="tableInput" maxlength="20" autocomplete="off"></textarea> </td>
-				<td><textarea placeholder="Table data" class="tableInput" maxlength="20" autocomplete="off"></textarea> </td>
-			</tbody>
+		<div class="main-content">
+			<p id="text1">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aliquam dolore, maiores accusantium
+				dicta aliquid dignissimos, magnam impedit culpa laborum corrupti aut molestias obcaecati fugiat,
+				reprehenderit at optio minus vitae.
+			</p>
+			<img src="images/cat.jpg" alt="Cat" title="Cat">
+		</div>
 
-
-		</table>
-	</div>
+		<div class="main-content">
+			<img src="images/rabbit.jpg" alt="Rabbit" title="Rabbit">
+			<p id="text2">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut at, saepe, natus ea, molestias sunt dolores
+				repellendus libero explicabo quasi magni minima harum quibusdam consectetur necessitatibus accusantium
+				omnis
+				iusto exercitationem.
+			</p>
+		</div>
+		<hr>
+		<div class="text-input">
+			<input type="text" autocomplete="off" placeholder="Input text..." id="textInput">
+		</div>
+		<div class="buttons">
+			<button onclick="alertFunction()">Pop up dialogue</button>
+			<button onclick="outputFunction()">Output the text input</button>
+			<button onclick="confirmFunction()">Confirmation button</button>
+		</div>
+	</main>
+	<footer>
+	</footer>
 	<script src="js/script.js"></script>
 </body>
 

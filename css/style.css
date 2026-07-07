@@ -1,36 +1,26 @@
 /* Set font */
 @font-face {
-    font-family: mainFont;
-    src: url(../fonts/mainFont.otf);
+    font-family: main-font;
+    src: url(../fonts/main-font.otf);
 }
 
-/* Set global text properties */
-html,
-input[type=text],
-button,
-textarea {
-    font-family: mainFont;
-    text-align: center;
-    color: lightgray;
-}
-
-/* Set background color*/
-input[type=text],
-textarea,
-button,
-table,
-body {
+/* Set global text and background color */
+* {
+    font-family: main-font;
+    color: #d1d7e0;
     background-color: #212830;
 }
 
 /* Removes any body margins*/
 body {
-    display: flex;
     margin: 0;
 }
 
-/* Italic input placeholder text for the different browsers */
+footer {
+    padding: 40px;
+}
 
+/* Italic input placeholder text for the different browsers */
 /* Chromium */
 ::-webkit-input-placeholder {
     font-style: italic;
@@ -47,74 +37,116 @@ body {
 }
 
 /* Text elements */
-p {
-    width: 700px;
-    padding: 12px;
-    text-align: left;
+h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;  
 }
 
 table,
 th,
 td {
-    border: 2px solid #902bf5;
+    border: 1px solid #5201a3;
     border-collapse: collapse;
-    width: 50%;
 }
 
 /* Interactive elements */
-button {
+table input[type=text],
+table button {
+    border: 0px;
+}
+
+input[type=color] {
+    border: none;
+    width: 150px;
+    height: 30px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 1px;
+    border-color: #555;
+
+}
+
+/* Main column */
+main {
+    padding-left: 280px;
+    padding-right: 280px;
+}
+
+/* Top navigation bar */
+nav ul {
+    list-style-type: none;
+    background-color: #151b23;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    background-color: #151b23;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #252c34;
+}
+
+/* Class styles */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content p {
+    width: 750px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.buttons button,
+.text-input input[type=text] {
+    text-align: center;
     border: 2px solid #902bf5;
     border-radius: 7px;
     transition-duration: 0.15s;
     cursor: pointer;
-    float: left;
     padding: 15px;
     width: 250px;
-
 }
 
-button:hover {
+.buttons button:hover {
     background-color: #902bf5;
 }
 
-input[type=text] {
-    border: 3px solid #555;
-    outline: none;
-    transition: 0.1s;
-    padding: 10px 10px 10px 10px;
-}
-
-input[type=text]:focus {
-    border: 3px solid #ccc;
-}
-
-input[type=color] {
-    width: 200px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-
-textarea {
-    resize: none;
-    outline: none;
-    border: none;
-    width: 75%;
-}
-
-/* Class styles */
-.center {
-    display: block;
-    margin: auto;
-}
-
-.margin {
-    margin-top: 8px;
+.text-input {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
     margin-bottom: 8px;
 }
 
-.mainColumn {
-    background-color: #151b23;
-    width: 850px;
-    margin-top: 0;
-    margin-bottom: 0;
+.text-input input[type=text] {
+    border-color: #555;
+    outline: none;
+    transition-duration: 0.1s;
+}
+
+.text-input input[type=text]:focus {
+    border-color: #ccc;
 }
