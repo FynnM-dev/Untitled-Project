@@ -9,21 +9,12 @@ function outputFunction() {
     alert(document.getElementById('textInput').value);
 }
 
-/* Adds a color input to change the color of text to each paragraph */
+/*Makes each color input change the color of each paragraph */
 const paragraph = document.getElementsByTagName("p");
 const numberOfPara = paragraph.length;
 for (let i = 0; i < numberOfPara; i++) {
-
-    const input = document.createElement("input");
-    input.type = "color";
-    input.value = "#d1d7e0";
-    input.autocomplete = "off";
-    input.id = "colorPicker" + i.toString();
-
-    paragraph[i].insertAdjacentElement("beforebegin", input);
-    const text = document.getElementById("text" + i.toString());
-    input.addEventListener("input", function () {
-        text.style.color = this.value;
+    document.getElementById('colorPicker' + i).addEventListener('input', function () {
+        document.getElementById('text' + i).style.color = this.value;
     })
 }
 

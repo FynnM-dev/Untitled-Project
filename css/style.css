@@ -39,7 +39,7 @@ footer {
 /* Text elements */
 h1 {
     margin-bottom: 0;
-    padding-bottom: 0;  
+    padding-bottom: 0;
 }
 
 table,
@@ -55,17 +55,12 @@ table button {
     border: 0px;
 }
 
-input[type=color] {
-    border: none;
-    width: 150px;
-    height: 30px;
-}
-
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
     height: 1px;
-    border-color: #555;
+    background-color: #3d444d;
+    border: none;
 
 }
 
@@ -101,16 +96,29 @@ nav a:hover {
 }
 
 /* Class styles */
-
 .main-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    gap: 200px
+
+}
+
+.main-content input[type=color] {
+    height: 200px;
+    width: 64px;
+    border: 2px solid #902bf5;
+    border-radius: 7px;
 }
 
 .main-content p {
-    width: 750px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 600px;
+}
+
+.main-content img {
+    height: 200px;
+    width: 200px;
 }
 
 .buttons {
