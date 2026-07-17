@@ -45,14 +45,33 @@ h1 {
 table,
 th,
 td {
-    border: 1px solid #5201a3;
+    border: 1px solid #555;
     border-collapse: collapse;
 }
 
+table {
+    width: 100%;
+}
+
+th {
+    padding: 15px 0;
+    height: 30px;
+    background-color: #3d444d;
+}
+
+tr:nth-child(even) .table-input {
+    background-color: #151b23;
+}
+
+.table-input:hover {
+    background-color: #697583 !important;
+}
+
 /* Interactive elements */
-table input[type=text],
-table button {
-    border: 0px;
+button,
+.trash,
+input[type=color] {
+    cursor: pointer;
 }
 
 hr {
@@ -61,7 +80,6 @@ hr {
     height: 1px;
     background-color: #3d444d;
     border: none;
-
 }
 
 /* Main column */
@@ -91,7 +109,8 @@ nav a {
     text-align: center;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     background-color: #252c34;
 }
 
@@ -102,7 +121,6 @@ nav a:hover {
     display: flex;
     justify-content: center;
     gap: 200px
-
 }
 
 .main-content input[type=color] {
@@ -121,24 +139,38 @@ nav a:hover {
     width: 200px;
 }
 
+.trash-div {
+    display: flex;
+    justify-content: center;
+}
+
+.trash {
+    height: 35%;
+    width: 35%;
+}
+
+.trash:hover {
+    fill: #f00
+}
+
 .buttons {
     display: flex;
     justify-content: center;
     gap: 8px;
 }
 
-.buttons button,
+button,
 .text-input input[type=text] {
     text-align: center;
     border: 2px solid #902bf5;
     border-radius: 7px;
     transition-duration: 0.15s;
-    cursor: pointer;
     padding: 15px;
     width: 250px;
 }
 
-.buttons button:hover {
+button:hover,
+button:focus {
     background-color: #902bf5;
 }
 
@@ -157,4 +189,14 @@ nav a:hover {
 
 .text-input input[type=text]:focus {
     border-color: #ccc;
+}
+
+.trash-th {
+    width: 63px;
+}
+
+.table-div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
